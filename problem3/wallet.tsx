@@ -64,7 +64,7 @@ const WalletPage: React.FC<Props> = (props: Props) => {
           return 1;
         }
       });
-  }, [balances, prices]); // we dont prices in this function, so prices needs to be removed from dependecies
+  }, [balances, prices]); // we dont use prices in this function, so prices needs to be removed from dependecies
   
 // this one is called but never used and formattedBalances is  calculated after sortedBalances, but it is not memoized, so better to use useMemo
   const formattedBalances = sortedBalances.map((balance: WalletBalance) => {
